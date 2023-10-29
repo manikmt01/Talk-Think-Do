@@ -1,0 +1,306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html tag style  */
+@layer base {
+
+  html,
+  body {
+    @apply font-muli;
+  }
+
+  /* h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  } */
+}
+
+/* layer style to add multiple class */
+@layer components {
+
+  /* .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  } */
+  .active {
+    @apply !bg-Secondary;
+  }
+
+  .commonNavTitle {
+
+    @apply text-xs leading-5 mb-2 pl-14px tracking-tighter text-WhiteOp5;
+
+  }
+
+  .commonNavItem {
+    @apply flex items-start px-14px py-10px rounded-[4px] text-White hover:bg-Secondary hover:text-White transition-colors mb-[2px];
+  }
+
+  .commonNavItemText {
+    @apply flex-1 ml-11px tracking-tighter text-xsm leading-5 text-White self-center;
+  }
+}
+
+/* custom style */
+@layer utilities {
+  /* .filter-none {
+    filter: none;
+  }
+
+  .filter-grayscale {
+    filter: grayscale(100%);
+  } */
+
+
+  /* width */
+  .commonNav::-webkit-scrollbar,
+  .filterWrapp::-webkit-scrollbar {
+    width: 6px;
+    transition: background .5s, width .5s;
+  }
+
+  /* Track */
+  .commonNav::-webkit-scrollbar-track,
+  .filterWrapp::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-radius: 10px;
+    transition: background .5s;
+  }
+
+  /* Handle */
+  .commonNav::-webkit-scrollbar-thumb,
+  .filterWrapp::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+    transition: background .5s;
+  }
+
+  /* Handle on hover */
+  .commonNav:hover::-webkit-scrollbar-thumb,
+  .filterWrapp:hover::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.6);
+    transition: background .5s;
+  }
+
+  .commonNavItem svg,
+  .commonNavItem svg g {
+    transition: opacity .5s;
+    align-self: center;
+  }
+
+  .commonNavItem:hover svg g {
+    opacity: 1;
+    transition: opacity .5s;
+  }
+
+  .tag {
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: #44ABB9;
+    padding: 2px 28px 2px 13px;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 26px;
+    position: relative;
+  }
+
+  .tag:after,
+  .tag:before {
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 50%;
+    width: 8px;
+    height: 1px;
+    background-color: #fff;
+  }
+
+  .tag:after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .tag:before {
+    transform: translateY(-50%) rotate(135deg);
+  }
+
+  .slectArrow select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .slectArrow::after {
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 45%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 7px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7' fill='none'%3E%3Cpath d='M1 0.875L6.18122 6.05622L11.3624 0.875' stroke='%23262262' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+
+  .active svg g {
+    transition: opacity .5s;
+    opacity: 1 !important;
+  }
+
+  .accordion-button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    padding: 6px 6px 6px 14px;
+  }
+
+  .accordion-button::after {
+    position: absolute;
+    content: "";
+    right: 6px;
+    top: 6px;
+    width: 23px;
+    height: 23px;
+    background-color: rgb(208 214 225 / 50%);
+    border-radius: 4px;
+    transition: background .5s;
+  }
+
+  .accordion-button::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 23px;
+    right: 5.5px;
+    top: 54%;
+    transform: translateY(-50%) rotate(0deg);
+    background-color: initial;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23' fill='none'%3E%3Crect x='7' y='11' width='9' height='1' fill='%23262262'/%3E%3Crect x='11' y='7' width='1' height='9' fill='%23262262'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100%;
+    z-index: 9;
+    transition: background .5s, transform .5s;
+  }
+
+  .accordion-button.activeBtn::before {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='none'%3E%3Cpath fill='%23262262' d='M7 11h9v1H7z'/%3E%3C/svg%3E");
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .accordion-button.activeBtn::after {
+    background-color: #F5F7FA;
+  }
+
+  .accordion-button.activeBtn,
+  .accordion-button:hover {
+    background-color: #fff;
+    box-shadow: 0px 2px 20px 0px rgba(38, 34, 98, 0.07);
+    border-color: #fff;
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  /* -------------------------------------------------------------- */
+  /* Hide the default checkbox */
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+
+  /* Style the custom checkbox */
+  .custom-checkbox label {
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+    padding-left: 23px;
+  }
+
+  .custom-checkbox label::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #92A1BA;
+    cursor: pointer;
+    transition: background-color 0.5s, border-color 0.5s;
+  }
+
+  /* Define styles for the checked state */
+  .custom-checkbox input[type="checkbox"]:checked+label::before {
+    border-color: #44ABB9;
+  }
+
+  /* Optional: You can add a checkmark or any custom content to the checked state */
+  .custom-checkbox input[type="checkbox"]:checked+label::after {
+    content: "";
+    position: absolute;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' fill='none'%3E%3Cpath stroke='%2344ABB9' stroke-linecap='round' stroke-width='2' d='m1 5 3.122 3.345L11 1.416'/%3E%3C/svg%3E");
+    background-position: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    width: 12px;
+    height: 8.31px;
+  }
+
+  .flterWrappBody .w-\[248px\],
+  .flterWrappBody .filterWrapp,
+  .filterSm,
+  .filterWrapp,
+  .flterWrappBody #filter {
+    transition: all ease .6s;
+  }
+
+  .mainItemMid {
+    transition: all ease .6s;
+  }
+
+  .ItemMid {
+    padding-right: 248px;
+    transition: all ease .6s;
+  }
+
+  .filterWrapp {
+    width: 100%;
+    opacity: 1;
+    right: 0;
+  }
+
+  .filterSm .w-\[248px\] {
+    width: 60px;
+  }
+
+  #filte {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+    left: 0;
+    top: 0;
+  }
+
+  .filterSm #filter {
+    transform: rotate(90deg);
+    position: relative;
+    left: -25px;
+    top: 20px;
+    transition: width 0.5s ease, transform 0.5s ease;
+  }
+
+  .filterSm .filterWrapp {
+    position: relative;
+    right: -999999999999999;
+    opacity: 0;
+    transition: width 0.5s ease;
+  }
+
+}
