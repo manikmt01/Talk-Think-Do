@@ -18,15 +18,36 @@
 </head>
 
 <body>
+  <header class=" xlg:hidden bg-Primary text-White  py-3 fixed top-0 left-0 w-full z-20">
+    <div class="px-4 flex flex-wrap justify-between gap-3">
+      <button class="leftMenu"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+          class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg></button>
+      <a href="index.html"><img src="img/logo-ttd-line.svg" alt="img"></a>
 
+    </div>
+  </header>
 
   <!-- wrapper start  -->
-  <div class="wrapper p-10px">
+  <div class="wrapper xlg:p-10px xlg:pt-0 pt-16">
     <!-- flex body wrapper start  -->
     <div>
       <!-- main left items start  -->
-      <div class=" w-64 bg-White fixed left-10px top-10px">
-        <div class=" navWrapp bg-Primary text-White py-30px  px-15px rounded-10px z-50">
+      <div
+        class="leftMenuBody w-0 -left-96 xlg:w-64  z-50 bg-White  fixed  xlg:left-10px xlg:top-10px xlg:rounded-10px">
+        <!-- Chnages some class for mobile -->
+        <div class=" navWrapp bg-Primary text-White py-30px  xlg:px-15px xlg:rounded-10px z-50">
+          <!-- Chnages some class for mobile -->
+          <!-- cross button for mobile  -->
+          <div class="xlg:hidden block text-right mb-3 -mt-3 pr-4">
+            <button class="cross "><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+              </svg></button>
+          </div>
           <!-- logo start  -->
           <div class="logo mb-30px px-15px h-30px">
             <a href="index.html"><img src="./img/logo-ttd-line.svg" alt="logo" class="m-auto text-center w-188px"></a>
@@ -50,7 +71,7 @@
               <ul>
                 <!-- single item start  -->
                 <li>
-                  <a href="index.html" class="commonNavItem  active">
+                  <a href="index.html" class="commonNavItem  ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="self-center" width="14" height="15"
                       viewBox="0 0 14 15" fill="none">
                       <g opacity="1">
@@ -111,7 +132,7 @@
               <ul>
                 <!-- single item start  -->
                 <li>
-                  <a href="QuestionsAndItems.html" class="commonNavItem">
+                  <a href="QuestionsAndItems.html" class="commonNavItem active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
                       <g opacity="0.5">
                         <path d="M2.95 3.32495L1 4.48741V6.76177" stroke="white" stroke-width="0.75"
@@ -285,27 +306,28 @@
       </div>
       <!-- main left items end -->
       <!-- main right items start  -->
-      <div class=" w-full pl-64">
-        <div class="py-30px pl-30px pr-5">
+      <div class=" w-full xlg:pl-64">
+        <div class="commonPadding">
 
           <!-- Employee onboarding start  -->
           <div class="Employee ">
-            <h2 class="text-4xl leading-[45px] text-Primary tracking-tight font-semibold pb-30px">Employee onboarding
+            <h2 class="lg:text-4xl text-2xl leading-[45px] text-Primary tracking-tight font-semibold pb-30px">Employee
+              onboarding
             </h2>
-            <div class="grid grid-cols-3 gap-11px">
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-11px">
               <!-- single item start  -->
               <div>
-                <div class="bg-White w-full h-36 shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] rounded-md"></div>
+                <div class="bg-White w-full h-36 shadow-4xl rounded-md"></div>
               </div>
               <!-- single item end -->
               <!-- single item start  -->
               <div>
-                <div class="bg-White w-full h-36 shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] rounded-md"></div>
+                <div class="bg-White w-full h-36 shadow-4xl rounded-md"></div>
               </div>
               <!-- single item end -->
               <!-- single item start  -->
               <div>
-                <div class="bg-White w-full h-36 shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] rounded-md"></div>
+                <div class="bg-White w-full h-36 shadow-4xl rounded-md"></div>
               </div>
               <!-- single item end -->
             </div>
@@ -314,11 +336,10 @@
           <!-- Recent Questions and items start  -->
           <div class="pt-25px">
             <!-- top item start  -->
-            <div class="flex justify-between items-center flex-wrap pb-4">
-              <h4 class="text-22px self-center text-Primary font-semibold leading-7 tracking-tight">Recent Questions
+            <div class="commonItem11">
+              <h4 class="commonItem12">Recent Questions
                 and items</h4>
-              <button type="button"
-                class="self-center  bg-Secondary shadow-[0_2px_20px_0_rgba(46,94,152,0.5)] rounded-[18px] pl-10px pr-3 py-[2.5px] text-sm leading-[26px] text-White flex gap-[6px]">
+              <button type="button" class="commonItem1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" class="self-center" height="17" viewBox="0 0 20 17"
                   fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -332,13 +353,11 @@
             <div class="">
 
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem2">
                 <!-- left item start  -->
                 <span class="col-span-7 self-center">
                   <span class="flex items-start ">
-                    <span
-                      class="bg-ButtonBorderColorOp2 w-66px h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center">
+                    <span class="commonItem7">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 14 16" fill="none">
                         <path d="M2.95 3.32495L1 4.48741V6.76177" stroke="#262262" stroke-width="0.75"
                           stroke-linecap="round" stroke-linejoin="round" />
@@ -365,7 +384,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">Learning about
+                      <span class="commonItem6">Learning about
                         alloys</span>
                       <span class="block text-colorP text-sm leading-[26px]">What is a mixture of metals is
                         called?</span>
@@ -376,26 +395,24 @@
                 <!-- right item start  -->
                 <span class="col-span-5 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <img src="img/ico-type.svg" alt="img" class="self-center">
                       <span class="self-center">Multiple
                         choice</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span class="self-center">Just
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                        class="self-center">Just
                         now</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+3 more</span></span>
                     <!-- inner single item end -->
@@ -407,13 +424,11 @@
               <!-- single item end -->
 
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem2">
                 <!-- left item start  -->
                 <span class="col-span-7 self-center">
                   <span class="flex items-start ">
-                    <span
-                      class="bg-ButtonBorderColorOp2 w-66px h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center">
+                    <span class="commonItem7">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 14 16" fill="none">
                         <path d="M2.95 3.32495L1 4.48741V6.76177" stroke="#262262" stroke-width="0.75"
                           stroke-linecap="round" stroke-linejoin="round" />
@@ -440,7 +455,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">Chromosomes and
+                      <span class="commonItem6">Chromosomes and
                         Biology</span>
                       <span class="block text-colorP text-sm leading-[26px]">Where are chromosomes found - the
                         cytoplasm, nucleus, ribosomes or vacuole?</span>
@@ -451,25 +466,22 @@
                 <!-- right item start  -->
                 <span class="col-span-5 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <img src="img/ico-type.svg" alt="img" class="self-center">
                       <span class="self-center">Rating</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
                         class="self-center">Yesterday</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+2 more</span></span>
                     <!-- inner single item end -->
@@ -480,13 +492,11 @@
               </a>
               <!-- single item end -->
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem2">
                 <!-- left item start  -->
                 <span class="col-span-7 self-center">
                   <span class="flex items-start ">
-                    <span
-                      class="bg-ButtonBorderColorOp2 w-66px h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center">
+                    <span class="commonItem7">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 14 16" fill="none">
                         <path d="M2.95 3.32495L1 4.48741V6.76177" stroke="#262262" stroke-width="0.75"
                           stroke-linecap="round" stroke-linejoin="round" />
@@ -513,7 +523,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">The lungs and basics
+                      <span class="commonItem6">The lungs and basics
                         of breathing</span>
                       <span class="block text-colorP text-sm leading-[26px]">Where does the pulmonary artery take blood
                         to?</span>
@@ -524,26 +534,24 @@
                 <!-- right item start  -->
                 <span class="col-span-5 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <img src="img/ico-type.svg" alt="img" class="self-center">
                       <span class="self-center">Multiple
                         choice</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span class="self-center">Just
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                        class="self-center">Just
                         now</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+4 more</span></span>
                     <!-- inner single item end -->
@@ -561,11 +569,10 @@
           <!-- Recent Questions and items start  -->
           <div class="pt-25px">
             <!-- top item start  -->
-            <div class="flex justify-between items-center flex-wrap pb-4">
-              <h4 class="text-22px self-center text-Primary font-semibold leading-7 tracking-tight">Recent Activities
+            <div class="commonItem11">
+              <h4 class="commonItem12">Recent Activities
               </h4>
-              <button type="button"
-                class="self-center  bg-Secondary shadow-[0_2px_20px_0_rgba(46,94,152,0.5)] rounded-[18px] pl-10px pr-3 py-[2.5px] text-sm leading-[26px] text-White flex gap-[6px]">
+              <button type="button" class="commonItem1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" class="self-center" height="17" viewBox="0 0 20 17"
                   fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -579,13 +586,11 @@
             <div class="">
 
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem2">
                 <!-- left item start  -->
                 <span class="col-span-7 self-center">
                   <span class="flex items-start ">
-                    <span
-                      class="bg-PublishedOp01 w-[70.55px] h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center border-l-[4.28px] border-Published border-solid rounded-s-[3px] ">
+                    <span class="commonItem10 ">
                       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="29" viewBox="0 0 26 29" fill="none">
                         <g opacity="1">
                           <path d="M7.41406 0.5H18.105" stroke="#40982E" stroke-linecap="round" />
@@ -597,7 +602,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">Science basics</span>
+                      <span class="commonItem6">Science basics</span>
                       <span class="block text-colorP text-sm leading-[26px]">17 Items</span>
                     </span>
                   </span>
@@ -606,9 +611,9 @@
                 <!-- right item start  -->
                 <span class="col-span-5 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <span
                         class="bg-Published w-[17px] h-[18.18px] flex justify-center items-center rounded-full p-1 self-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
@@ -619,18 +624,16 @@
                       <span class="self-center text-Published">Published</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span class="self-center">Just
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                        class="self-center">Just
                         now</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+3 more</span></span>
                     <!-- inner single item end -->
@@ -646,13 +649,11 @@
 
 
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem2">
                 <!-- left item start  -->
                 <span class="col-span-7 self-center">
                   <span class="flex items-start ">
-                    <span
-                      class="bg-PublishedOp01 w-[70.55px] h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center border-l-[4.28px] border-Published border-solid rounded-s-[3px] ">
+                    <span class="commonItem10 ">
                       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="29" viewBox="0 0 26 29" fill="none">
                         <g opacity="1">
                           <path d="M7.41406 0.5H18.105" stroke="#40982E" stroke-linecap="round" />
@@ -664,7 +665,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">A closer look at
+                      <span class="commonItem6">A closer look at
                         Physics</span>
                       <span class="block text-colorP text-sm leading-[26px]">8 Items</span>
                     </span>
@@ -674,9 +675,9 @@
                 <!-- right item start  -->
                 <span class="col-span-5 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <span
                         class="bg-Published w-[17px] h-[18.18px] flex justify-center items-center rounded-full p-1 self-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
@@ -687,18 +688,16 @@
                       <span class="self-center text-Published">Published</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span class="self-center">Just
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                        class="self-center">Just
                         now</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+2 more</span></span>
                     <!-- inner single item end -->
@@ -714,8 +713,7 @@
 
 
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem2">
                 <!-- left item start  -->
                 <span class="col-span-7 self-center">
                   <span class="flex items-start ">
@@ -732,7 +730,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">Exploring Quantum
+                      <span class="commonItem6">Exploring Quantum
                         mechanics</span>
                       <span class="block text-colorP text-sm leading-[26px]">11 Items</span>
                     </span>
@@ -742,9 +740,9 @@
                 <!-- right item start  -->
                 <span class="col-span-5 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <span
                         class="bg-Draft w-[17px] h-[18.18px] flex justify-center items-center rounded-full p-1 self-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
@@ -755,18 +753,16 @@
                       <span class="self-center text-Draft">Published</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span class="self-center">Just
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                        class="self-center">Just
                         now</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+4 more</span></span>
                     <!-- inner single item end -->
@@ -797,6 +793,22 @@
 
 
   <script src="./index.js" type="module"></script>
+  <script>
+
+    // menu humburger
+    const leftMenu = document.querySelector('.leftMenu');
+    const leftMenuBody = document.querySelector('.leftMenuBody');
+    const crossBtn = document.querySelector('.cross');
+
+    function openLeftMenuBody() {
+      leftMenuBody.classList.toggle('ShowLeftMenu');
+    }
+    function hideItem() {
+      leftMenuBody.classList.toggle('ShowLeftMenu');
+    }
+    crossBtn.addEventListener('click', hideItem);
+    leftMenu.addEventListener('click', openLeftMenuBody);
+  </script>
 </body>
 
 </html>

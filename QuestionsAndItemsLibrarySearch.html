@@ -19,15 +19,40 @@
 </head>
 
 <body>
-
+  <header class=" xlg:hidden bg-Primary text-White  py-3 fixed top-0 left-0 w-full z-20">
+    <div class="px-4 flex flex-wrap justify-between gap-3">
+      <button class="leftMenu"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+          class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg></button>
+      <a href="index.html"><img src="img/logo-ttd-line.svg" alt="img"></a>
+      <button class="FilterMenu"><svg xmlns="http://www.w3.org/2000/svg" class="self-center" width="22" height="20"
+          viewBox="0 0 22 20" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21 1H1L9 10.46V17L13 19V10.46L21 1V1Z" stroke="#fff"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg></button>
+    </div>
+  </header>
 
   <!-- wrapper start  -->
-  <div class="wrapper p-10px">
+  <div class="wrapper xlg:p-10px xlg:pt-0 pt-16">
     <!-- flex body wrapper start  -->
     <div>
       <!-- main left items start  -->
-      <div class=" w-64 bg-White fixed left-10px top-10px">
-        <div class=" navWrapp bg-Primary text-White py-30px  px-15px rounded-10px z-50">
+      <div
+        class="leftMenuBody w-0 -left-96 xlg:w-64  z-50 bg-White  fixed  xlg:left-10px xlg:top-10px xlg:rounded-10px">
+        <!-- Chnages some class for mobile -->
+        <div class=" navWrapp bg-Primary text-White py-30px  xlg:px-15px xlg:rounded-10px z-50">
+          <!-- Chnages some class for mobile -->
+          <!-- cross button for mobile  -->
+          <div class="xlg:hidden block text-right mb-3 -mt-3 pr-4">
+            <button class="cross "><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+              </svg></button>
+          </div>
           <!-- logo start  -->
           <div class="logo mb-30px px-15px h-30px">
             <a href="index.html"><img src="./img/logo-ttd-line.svg" alt="logo" class="m-auto text-center w-188px"></a>
@@ -286,17 +311,20 @@
       </div>
       <!-- main left items end -->
       <!-- main right items start  -->
-      <div class="w-full pl-64 pr-[60px] mainItemMid">
-        <div class="py-30px px-30px ">
+      <div class="w-full xlg:pl-64 xlg:pr-[60px] mainItemMid">
+        <div class="sm:py-30px sm:px-30px p-3">
 
           <!-- Recent Questions and items start  -->
           <div>
             <!-- top item start  -->
-            <div class="flex justify-between items-center flex-wrap pb-6">
-              <h4 class="text-3xl self-center text-Primary font-semibold leading-7 tracking-tight">Question and item
+            <div class="sm:flex sm:justify-between items-center flex-wrap pb-6">
+              <h4
+                class="sm:text-3xl text-xl self-center text-Primary font-semibold leading-7 tracking-tight mb-3 sm:mb-0">
+                Question
+                and
+                item
                 library</h4>
-              <button type="button"
-                class="self-center  bg-Secondary shadow-[0_2px_20px_0_rgba(46,94,152,0.5)] rounded-[18px] pl-10px pr-3 py-[2.5px] text-sm leading-[26px] text-White flex gap-[6px]">
+              <button type="button" class="commonItem1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" class="self-center" height="17" viewBox="0 0 20 17"
                   fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -310,7 +338,7 @@
             <div>
               <div class="relative mb-[18px]">
                 <input id="tagInput"
-                  class=" border border-[#DCE1E9] border-solid w-full py-5 px-[57.5px] text-Primary bg-White text-xl leading-6 placeholder:text-Primary focus:outline-none focus:border-Primary focus:ring-Primary focus:ring-1"
+                  class=" border border-[#DCE1E9] border-solid w-full py-5 px-[57.5px] text-Primary bg-White md:text-xl text-base leading-6 placeholder:text-Primary focus:outline-none focus:border-Primary focus:ring-Primary focus:ring-1"
                   type="text" placeholder="Search by name or tag (Type and press Enter to add a tag)">
 
                 <button id="submitButton" class=" absolute left-[22.5px] top-1/2 -translate-y-1/2"><img
@@ -321,13 +349,13 @@
 
 
             <!-- 67 items that match your search start  -->
-            <div class="flex justify-between  gap-3">
+            <div class="sm:flex sm:justify-between  sm:gap-3">
               <div id="tagContainer" class="flex justify-start flex-wrap gap-1 self-center">
                 <span class="tag">Science</span>
                 <span class="tag">Rating</span>
                 <span class="tag">Multiple choice</span>
               </div>
-              <div class="relative inline-block text-left self-center min-w-[112px]">
+              <div class="relative inline-block text-left self-center min-w-[112px] mt-4 sm:mt-0">
                 <div>
                   <button type="button" class="inline-flex w-full justify-center text-[15px] text-[#063361] leading-5"
                     id="menu-button" aria-expanded="true" aria-haspopup="true">
@@ -362,13 +390,11 @@
             <div class="pt-6">
 
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem14">
                 <!-- left item start  -->
                 <span class="col-span-6 self-center">
                   <span class="flex items-start ">
-                    <span
-                      class="bg-ButtonBorderColorOp2 w-66px h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center">
+                    <span class="commonItem7">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 14 16" fill="none">
                         <path d="M2.95 3.32495L1 4.48741V6.76177" stroke="#262262" stroke-width="0.75"
                           stroke-linecap="round" stroke-linejoin="round" />
@@ -395,7 +421,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">Learning about
+                      <span class="commonItem6">Learning about
                         alloys</span>
                       <span class="block text-colorP text-sm leading-[26px]">What is a mixture of metals is
                         called?</span>
@@ -406,26 +432,24 @@
                 <!-- right item start  -->
                 <span class="col-span-6 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <img src="img/ico-type.svg" alt="img" class="self-center">
                       <span class="self-center">Multiple
                         choice</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span class="self-center">Just
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                        class="self-center">Just
                         now</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+3 more</span></span>
                     <!-- inner single item end -->
@@ -437,13 +461,11 @@
               <!-- single item end -->
 
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem14">
                 <!-- left item start  -->
                 <span class="col-span-6 self-center">
                   <span class="flex items-start ">
-                    <span
-                      class="bg-ButtonBorderColorOp2 w-66px h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center">
+                    <span class="commonItem7">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 14 16" fill="none">
                         <path d="M2.95 3.32495L1 4.48741V6.76177" stroke="#262262" stroke-width="0.75"
                           stroke-linecap="round" stroke-linejoin="round" />
@@ -470,7 +492,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">Chromosomes and
+                      <span class="commonItem6">Chromosomes and
                         Biology</span>
                       <span class="block text-colorP text-sm leading-[26px]">Where are chromosomes found - the
                         cytoplasm, nucleus, ribosomes or vacuole?</span>
@@ -481,25 +503,22 @@
                 <!-- right item start  -->
                 <span class="col-span-6 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <img src="img/ico-type.svg" alt="img" class="self-center">
                       <span class="self-center">Rating</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
                         class="self-center">Yesterday</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+2 more</span></span>
                     <!-- inner single item end -->
@@ -510,13 +529,11 @@
               </a>
               <!-- single item end -->
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem14">
                 <!-- left item start  -->
                 <span class="col-span-6 self-center">
                   <span class="flex items-start ">
-                    <span
-                      class="bg-ButtonBorderColorOp2 w-66px h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center">
+                    <span class="commonItem7">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 14 16" fill="none">
                         <path d="M2.95 3.32495L1 4.48741V6.76177" stroke="#262262" stroke-width="0.75"
                           stroke-linecap="round" stroke-linejoin="round" />
@@ -543,7 +560,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">The lungs and basics
+                      <span class="commonItem6">The lungs and basics
                         of breathing</span>
                       <span class="block text-colorP text-sm leading-[26px]">Where does the pulmonary artery take blood
                         to?</span>
@@ -554,26 +571,24 @@
                 <!-- right item start  -->
                 <span class="col-span-6 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <img src="img/ico-type.svg" alt="img" class="self-center">
                       <span class="self-center">Multiple
                         choice</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span class="self-center">Just
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                        class="self-center">Just
                         now</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+4 more</span></span>
                     <!-- inner single item end -->
@@ -584,13 +599,11 @@
               </a>
               <!-- single item end -->
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem14">
                 <!-- left item start  -->
                 <span class="col-span-6 self-center">
                   <span class="flex items-start ">
-                    <span
-                      class="bg-ButtonBorderColorOp2 w-66px h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center">
+                    <span class="commonItem7">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 14 16" fill="none">
                         <path d="M2.95 3.32495L1 4.48741V6.76177" stroke="#262262" stroke-width="0.75"
                           stroke-linecap="round" stroke-linejoin="round" />
@@ -617,7 +630,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">Learning about
+                      <span class="commonItem6">Learning about
                         alloys</span>
                       <span class="block text-colorP text-sm leading-[26px]">What is a mixture of metals is
                         called?</span>
@@ -628,26 +641,24 @@
                 <!-- right item start  -->
                 <span class="col-span-6 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <img src="img/ico-type.svg" alt="img" class="self-center">
                       <span class="self-center">Multiple
                         choice</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span class="self-center">Just
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                        class="self-center">Just
                         now</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+3 more</span></span>
                     <!-- inner single item end -->
@@ -659,13 +670,11 @@
               <!-- single item end -->
 
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem14">
                 <!-- left item start  -->
                 <span class="col-span-6 self-center">
                   <span class="flex items-start ">
-                    <span
-                      class="bg-ButtonBorderColorOp2 w-66px h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center">
+                    <span class="commonItem7">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 14 16" fill="none">
                         <path d="M2.95 3.32495L1 4.48741V6.76177" stroke="#262262" stroke-width="0.75"
                           stroke-linecap="round" stroke-linejoin="round" />
@@ -692,7 +701,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">Chromosomes and
+                      <span class="commonItem6">Chromosomes and
                         Biology</span>
                       <span class="block text-colorP text-sm leading-[26px]">Where are chromosomes found - the
                         cytoplasm, nucleus, ribosomes or vacuole?</span>
@@ -703,25 +712,22 @@
                 <!-- right item start  -->
                 <span class="col-span-6 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <img src="img/ico-type.svg" alt="img" class="self-center">
                       <span class="self-center">Rating</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
                         class="self-center">Yesterday</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+2 more</span></span>
                     <!-- inner single item end -->
@@ -732,13 +738,11 @@
               </a>
               <!-- single item end -->
               <!-- single item start  -->
-              <a href=""
-                class="grid grid-cols-12 p-[7px] bg-White shadow-[0_2px_20px_0_rgba(38,34,98,0.07)] mb-10px last:mb-0">
+              <a href="" class="commonItem14">
                 <!-- left item start  -->
                 <span class="col-span-6 self-center">
                   <span class="flex items-start ">
-                    <span
-                      class="bg-ButtonBorderColorOp2 w-66px h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center">
+                    <span class="commonItem7">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 14 16" fill="none">
                         <path d="M2.95 3.32495L1 4.48741V6.76177" stroke="#262262" stroke-width="0.75"
                           stroke-linecap="round" stroke-linejoin="round" />
@@ -765,7 +769,7 @@
                       </svg>
                     </span>
                     <span class="flex-1 ml-15px self-center">
-                      <span class="block text-Primary text-lg leading-6 tracking-tighter mb-[3px]">The lungs and basics
+                      <span class="commonItem6">The lungs and basics
                         of breathing</span>
                       <span class="block text-colorP text-sm leading-[26px]">Where does the pulmonary artery take blood
                         to?</span>
@@ -776,26 +780,24 @@
                 <!-- right item start  -->
                 <span class="col-span-6 self-center">
                   <!-- single tiem start  -->
-                  <span class="flex justify-end gap-15px flex-wrap">
+                  <span class="commonButton2Inner">
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]">
+                    <span class="commonItem5">
                       <img src="img/ico-type.svg" alt="img" class="self-center">
                       <span class="self-center">Multiple
                         choice</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px]"><img
-                        src="img/ico-clock.svg" alt="img" class="self-center"> <span class="self-center">Just
+                    <span class="commonItem5"><img src="img/ico-clock.svg" alt="img" class="self-center"> <span
+                        class="self-center">Just
                         now</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-10px  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem3">
                       <span class="self-center">Science</span></span>
                     <!-- inner single item end -->
                     <!-- inner single item start  -->
-                    <span
-                      class="flex flex-wrap gap-[6.5px]  text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm">
+                    <span class="commonItem4">
                       <img src="img/ico-tag.svg" alt="img" class="self-center">
                       <span class="self-center">+4 more</span></span>
                     <!-- inner single item end -->
@@ -809,11 +811,10 @@
             </div>
             <!-- single item wrapp end  -->
             <!-- pagination start  -->
-            <div class="flex flex-wrap justify-between pt-30px">
+            <div class="sm:flex sm:flex-wrap sm:justify-between pt-30px">
               <!-- left item start  -->
-              <div class="self-center">
-                <button id="Previous"
-                  class="self-center  bg-Secondary  rounded-[20.5px] pl-[35px] pr-[35px] py-[7px] text-sm leading-[20px] text-White">Previous</button>
+              <div class="self-center sm:text-left text-center mb-3 sm:mb-0">
+                <button id="Previous" class="commonButton">Previous</button>
               </div>
               <!-- left item end -->
               <!-- mid item start -->
@@ -836,14 +837,12 @@
               </div>
               <!-- mid item end -->
               <!-- right item start -->
-              <div class="self-center">
-                <button id="Next"
-                  class="self-center  bg-Secondary  rounded-[20.5px] pl-[35px] pr-[35px] py-[7px] text-sm leading-[20px] text-White">Next</button>
+              <div class="self-center sm:text-left text-center mt-3 sm:mt-0">
+                <button id="Next" class="commonButton">Next</button>
               </div>
               <!-- right item end -->
             </div>
             <!-- pagination end -->
-
           </div>
           <!-- Recent Questions and items end -->
         </div>
@@ -851,13 +850,15 @@
       </div>
       <!-- main right items end -->
       <!-- filter items start  -->
-      <div class=" fixed right-0 top-0 h-full max-h-full p-10px overflow-hidden flterWrappBody filterSm ">
-        <div class="bg-[#92A1BA] bg-opacity-10  w-[248px] max-w-full px-15px py-5 rounded-10px  h-full max-h-full">
-
-
+      <div
+        class="FilterMenuBody fixed   right-0 top-0 h-full max-h-full xlg:p-10px xlg:overflow-hidden flterWrappBody filterSm z-50 text-White xlg:text-Primary">
+        <!-- Chnages some class for mobile -->
+        <div
+          class="xlg:bg-[#92A1BA] xlg:bg-opacity-10  bg-Primary w-full xlg:w-[248px] max-w-full px-15px py-5 xlg:rounded-10px  h-full max-h-full  xlg:overflow-hidden FilterMenuBodyinner">
+          <!-- Chnages some class for mobile -->
           <!-- filter top title start  -->
-          <div class="pb-6">
-            <button class="flex gap-[11px] text-lg font-semibold tracking-tighter text-Primary " id="filter">
+          <div class="pb-6 xlg:block hidden">
+            <button class="xlg:flex hidden gap-[11px] text-lg font-semibold tracking-tighter text-Primary " id="filter">
               <svg xmlns="http://www.w3.org/2000/svg" class="self-center" width="22" height="20" viewBox="0 0 22 20"
                 fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21 1H1L9 10.46V17L13 19V10.46L21 1V1Z"
@@ -865,6 +866,14 @@
               </svg>
               <span class="self-center ">Filters</span>
             </button>
+          </div>
+          <!-- cross button for mobile  -->
+          <div class="xlg:hidden block text-right mb-3">
+            <button class="cross2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+              </svg></button>
           </div>
           <!-- filter top title end -->
           <!-- fillter item wrapp start  -->
@@ -874,8 +883,7 @@
 
               <!-- single item start  -->
               <div class="accordion-section mb-10px">
-                <button
-                  class="accordion-button w-full border border-solid border-[#D0D6E1] rounded text-left text-base tracking-tighter leading-tight font-semibold">Type
+                <button class="accordion-button commonItem8">Type
                   of item
                 </button>
                 <div class="accordion-content  ">
@@ -883,76 +891,74 @@
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox1">
-                      <label for="myCheckbox1" class="text-[13px] leading-5 tracking-tight text-Primary">Rating</label>
+                      <label for="myCheckbox1" class="commonItem9">Rating</label>
                     </div>
                     <!-- single item end -->
 
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox2">
-                      <label for="myCheckbox2" class="text-[13px] leading-5 tracking-tight text-Primary">Multiple
+                      <label for="myCheckbox2" class="commonItem9">Multiple
                         Choice</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox3">
-                      <label for="myCheckbox3" class="text-[13px] leading-5 tracking-tight text-Primary">Fill in the
+                      <label for="myCheckbox3" class="commonItem9">Fill in the
                         Blanks (Cloze)</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox4">
-                      <label for="myCheckbox4" class="text-[13px] leading-5 tracking-tight text-Primary">Classify, Match
+                      <label for="myCheckbox4" class="commonItem9">Classify, Match
                         & Order</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox5">
-                      <label for="myCheckbox5" class="text-[13px] leading-5 tracking-tight text-Primary">Written &
+                      <label for="myCheckbox5" class="commonItem9">Written &
                         Recorded</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox6">
-                      <label for="myCheckbox6" class="text-[13px] leading-5 tracking-tight text-Primary">Highlight and
+                      <label for="myCheckbox6" class="commonItem9">Highlight and
                         Drawing</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox7">
-                      <label for="myCheckbox7" class="text-[13px] leading-5 tracking-tight text-Primary">Math</label>
+                      <label for="myCheckbox7" class="commonItem9">Math</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox8">
-                      <label for="myCheckbox8"
-                        class="text-[13px] leading-5 tracking-tight text-Primary">Graphing</label>
+                      <label for="myCheckbox8" class="commonItem9">Graphing</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox9">
-                      <label for="myCheckbox9" class="text-[13px] leading-5 tracking-tight text-Primary">Charts</label>
+                      <label for="myCheckbox9" class="commonItem9">Charts</label>
                     </div>
                     <!-- single item end -->
 
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox10">
-                      <label for="myCheckbox10"
-                        class="text-[13px] leading-5 tracking-tight text-Primary">Chemistry</label>
+                      <label for="myCheckbox10" class="commonItem9">Chemistry</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox11">
-                      <label for="myCheckbox11" class="text-[13px] leading-5 tracking-tight text-Primary">Other</label>
+                      <label for="myCheckbox11" class="commonItem9">Other</label>
                     </div>
                     <!-- single item end -->
                   </div>
@@ -962,84 +968,81 @@
 
               <!-- single item start  -->
               <div class="accordion-section mb-10px">
-                <button
-                  class="accordion-button w-full border border-solid border-[#D0D6E1] rounded text-left text-base tracking-tighter leading-tight font-semibold">Tag
+                <button class="accordion-button commonItem8">Tag
                 </button>
                 <div class="accordion-content  ">
                   <div class="py-15px px-2">
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox1">
-                      <label for="myCheckbox1" class="text-[13px] leading-5 tracking-tight text-Primary">Rating</label>
+                      <label for="myCheckbox1" class="commonItem9">Rating</label>
                     </div>
                     <!-- single item end -->
 
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox2">
-                      <label for="myCheckbox2" class="text-[13px] leading-5 tracking-tight text-Primary">Multiple
+                      <label for="myCheckbox2" class="commonItem9">Multiple
                         Choice</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox3">
-                      <label for="myCheckbox3" class="text-[13px] leading-5 tracking-tight text-Primary">Fill in the
+                      <label for="myCheckbox3" class="commonItem9">Fill in the
                         Blanks (Cloze)</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox4">
-                      <label for="myCheckbox4" class="text-[13px] leading-5 tracking-tight text-Primary">Classify, Match
+                      <label for="myCheckbox4" class="commonItem9">Classify, Match
                         & Order</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox5">
-                      <label for="myCheckbox5" class="text-[13px] leading-5 tracking-tight text-Primary">Written &
+                      <label for="myCheckbox5" class="commonItem9">Written &
                         Recorded</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox6">
-                      <label for="myCheckbox6" class="text-[13px] leading-5 tracking-tight text-Primary">Highlight and
+                      <label for="myCheckbox6" class="commonItem9">Highlight and
                         Drawing</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox7">
-                      <label for="myCheckbox7" class="text-[13px] leading-5 tracking-tight text-Primary">Math</label>
+                      <label for="myCheckbox7" class="commonItem9">Math</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox8">
-                      <label for="myCheckbox8"
-                        class="text-[13px] leading-5 tracking-tight text-Primary">Graphing</label>
+                      <label for="myCheckbox8" class="commonItem9">Graphing</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox9">
-                      <label for="myCheckbox9" class="text-[13px] leading-5 tracking-tight text-Primary">Charts</label>
+                      <label for="myCheckbox9" class="commonItem9">Charts</label>
                     </div>
                     <!-- single item end -->
 
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox10">
-                      <label for="myCheckbox10"
-                        class="text-[13px] leading-5 tracking-tight text-Primary">Chemistry</label>
+                      <label for="myCheckbox10" class="commonItem9">Chemistry</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox11">
-                      <label for="myCheckbox11" class="text-[13px] leading-5 tracking-tight text-Primary">Other</label>
+                      <label for="myCheckbox11" class="commonItem9">Other</label>
                     </div>
                     <!-- single item end -->
                   </div>
@@ -1049,84 +1052,81 @@
 
               <!-- single item start  -->
               <div class="accordion-section mb-10px">
-                <button
-                  class="accordion-button w-full border border-solid border-[#D0D6E1] rounded text-left text-base tracking-tighter leading-tight font-semibold">Activity
+                <button class="accordion-button commonItem8">Activity
                 </button>
                 <div class="accordion-content  ">
                   <div class="py-15px px-2">
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox1">
-                      <label for="myCheckbox1" class="text-[13px] leading-5 tracking-tight text-Primary">Rating</label>
+                      <label for="myCheckbox1" class="commonItem9">Rating</label>
                     </div>
                     <!-- single item end -->
 
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox2">
-                      <label for="myCheckbox2" class="text-[13px] leading-5 tracking-tight text-Primary">Multiple
+                      <label for="myCheckbox2" class="commonItem9">Multiple
                         Choice</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox3">
-                      <label for="myCheckbox3" class="text-[13px] leading-5 tracking-tight text-Primary">Fill in the
+                      <label for="myCheckbox3" class="commonItem9">Fill in the
                         Blanks (Cloze)</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox4">
-                      <label for="myCheckbox4" class="text-[13px] leading-5 tracking-tight text-Primary">Classify, Match
+                      <label for="myCheckbox4" class="commonItem9">Classify, Match
                         & Order</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox5">
-                      <label for="myCheckbox5" class="text-[13px] leading-5 tracking-tight text-Primary">Written &
+                      <label for="myCheckbox5" class="commonItem9">Written &
                         Recorded</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox6">
-                      <label for="myCheckbox6" class="text-[13px] leading-5 tracking-tight text-Primary">Highlight and
+                      <label for="myCheckbox6" class="commonItem9">Highlight and
                         Drawing</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox7">
-                      <label for="myCheckbox7" class="text-[13px] leading-5 tracking-tight text-Primary">Math</label>
+                      <label for="myCheckbox7" class="commonItem9">Math</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox8">
-                      <label for="myCheckbox8"
-                        class="text-[13px] leading-5 tracking-tight text-Primary">Graphing</label>
+                      <label for="myCheckbox8" class="commonItem9">Graphing</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox9">
-                      <label for="myCheckbox9" class="text-[13px] leading-5 tracking-tight text-Primary">Charts</label>
+                      <label for="myCheckbox9" class="commonItem9">Charts</label>
                     </div>
                     <!-- single item end -->
 
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox10">
-                      <label for="myCheckbox10"
-                        class="text-[13px] leading-5 tracking-tight text-Primary">Chemistry</label>
+                      <label for="myCheckbox10" class="commonItem9">Chemistry</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox11">
-                      <label for="myCheckbox11" class="text-[13px] leading-5 tracking-tight text-Primary">Other</label>
+                      <label for="myCheckbox11" class="commonItem9">Other</label>
                     </div>
                     <!-- single item end -->
                   </div>
@@ -1136,84 +1136,81 @@
 
               <!-- single item start  -->
               <div class="accordion-section mb-10px">
-                <button
-                  class="accordion-button w-full border border-solid border-[#D0D6E1] rounded text-left text-base tracking-tighter leading-tight font-semibold">Owner
+                <button class="accordion-button commonItem8">Owner
                 </button>
                 <div class="accordion-content  ">
                   <div class="py-15px px-2">
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox1">
-                      <label for="myCheckbox1" class="text-[13px] leading-5 tracking-tight text-Primary">Rating</label>
+                      <label for="myCheckbox1" class="commonItem9">Rating</label>
                     </div>
                     <!-- single item end -->
 
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox2">
-                      <label for="myCheckbox2" class="text-[13px] leading-5 tracking-tight text-Primary">Multiple
+                      <label for="myCheckbox2" class="commonItem9">Multiple
                         Choice</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox3">
-                      <label for="myCheckbox3" class="text-[13px] leading-5 tracking-tight text-Primary">Fill in the
+                      <label for="myCheckbox3" class="commonItem9">Fill in the
                         Blanks (Cloze)</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox4">
-                      <label for="myCheckbox4" class="text-[13px] leading-5 tracking-tight text-Primary">Classify, Match
+                      <label for="myCheckbox4" class="commonItem9">Classify, Match
                         & Order</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox5">
-                      <label for="myCheckbox5" class="text-[13px] leading-5 tracking-tight text-Primary">Written &
+                      <label for="myCheckbox5" class="commonItem9">Written &
                         Recorded</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox6">
-                      <label for="myCheckbox6" class="text-[13px] leading-5 tracking-tight text-Primary">Highlight and
+                      <label for="myCheckbox6" class="commonItem9">Highlight and
                         Drawing</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox7">
-                      <label for="myCheckbox7" class="text-[13px] leading-5 tracking-tight text-Primary">Math</label>
+                      <label for="myCheckbox7" class="commonItem9">Math</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox8">
-                      <label for="myCheckbox8"
-                        class="text-[13px] leading-5 tracking-tight text-Primary">Graphing</label>
+                      <label for="myCheckbox8" class="commonItem9">Graphing</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox9">
-                      <label for="myCheckbox9" class="text-[13px] leading-5 tracking-tight text-Primary">Charts</label>
+                      <label for="myCheckbox9" class="commonItem9">Charts</label>
                     </div>
                     <!-- single item end -->
 
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox10">
-                      <label for="myCheckbox10"
-                        class="text-[13px] leading-5 tracking-tight text-Primary">Chemistry</label>
+                      <label for="myCheckbox10" class="commonItem9">Chemistry</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox11">
-                      <label for="myCheckbox11" class="text-[13px] leading-5 tracking-tight text-Primary">Other</label>
+                      <label for="myCheckbox11" class="commonItem9">Other</label>
                     </div>
                     <!-- single item end -->
                   </div>
@@ -1222,8 +1219,7 @@
               <!-- single item end  -->
               <!-- single item start  -->
               <div class="accordion-section mb-10px">
-                <button
-                  class="accordion-button w-full border border-solid border-[#D0D6E1] rounded text-left text-base tracking-tighter leading-tight font-semibold">More
+                <button class="accordion-button commonItem8">More
                   options
                 </button>
                 <div class="accordion-content  ">
@@ -1231,76 +1227,74 @@
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox1">
-                      <label for="myCheckbox1" class="text-[13px] leading-5 tracking-tight text-Primary">Rating</label>
+                      <label for="myCheckbox1" class="commonItem9">Rating</label>
                     </div>
                     <!-- single item end -->
 
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox2">
-                      <label for="myCheckbox2" class="text-[13px] leading-5 tracking-tight text-Primary">Multiple
+                      <label for="myCheckbox2" class="commonItem9">Multiple
                         Choice</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox3">
-                      <label for="myCheckbox3" class="text-[13px] leading-5 tracking-tight text-Primary">Fill in the
+                      <label for="myCheckbox3" class="commonItem9">Fill in the
                         Blanks (Cloze)</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox4">
-                      <label for="myCheckbox4" class="text-[13px] leading-5 tracking-tight text-Primary">Classify, Match
+                      <label for="myCheckbox4" class="commonItem9">Classify, Match
                         & Order</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox5">
-                      <label for="myCheckbox5" class="text-[13px] leading-5 tracking-tight text-Primary">Written &
+                      <label for="myCheckbox5" class="commonItem9">Written &
                         Recorded</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox6">
-                      <label for="myCheckbox6" class="text-[13px] leading-5 tracking-tight text-Primary">Highlight and
+                      <label for="myCheckbox6" class="commonItem9">Highlight and
                         Drawing</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox7">
-                      <label for="myCheckbox7" class="text-[13px] leading-5 tracking-tight text-Primary">Math</label>
+                      <label for="myCheckbox7" class="commonItem9">Math</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox8">
-                      <label for="myCheckbox8"
-                        class="text-[13px] leading-5 tracking-tight text-Primary">Graphing</label>
+                      <label for="myCheckbox8" class="commonItem9">Graphing</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox9">
-                      <label for="myCheckbox9" class="text-[13px] leading-5 tracking-tight text-Primary">Charts</label>
+                      <label for="myCheckbox9" class="commonItem9">Charts</label>
                     </div>
                     <!-- single item end -->
 
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox10">
-                      <label for="myCheckbox10"
-                        class="text-[13px] leading-5 tracking-tight text-Primary">Chemistry</label>
+                      <label for="myCheckbox10" class="commonItem9">Chemistry</label>
                     </div>
                     <!-- single item end -->
                     <!-- single item start  -->
                     <div class="custom-checkbox pb-3">
                       <input type="checkbox" id="myCheckbox11">
-                      <label for="myCheckbox11" class="text-[13px] leading-5 tracking-tight text-Primary">Other</label>
+                      <label for="myCheckbox11" class="commonItem9">Other</label>
                     </div>
                     <!-- single item end -->
                   </div>
@@ -1310,13 +1304,24 @@
 
               <!-- Add more sections as needed -->
             </div>
-
+            <div class="mt-3">
+              <button
+                class="flex  justify-center xlg:hidden gap-[11px] text-lg font-semibold tracking-tighter text-White    border border-solid border-[#D0D6E1] rounded text-left  leading-tight static px-6 py-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="self-center" width="22" height="20" viewBox="0 0 22 20"
+                  fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M21 1H1L9 10.46V17L13 19V10.46L21 1V1Z" stroke="#fff"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="self-center ">Filters</span>
+              </button>
+            </div>
             <!-- single item end -->
           </div>
           <!-- fillter item wrapp end -->
         </div>
         <!-- filter items end -->
       </div>
+      <!-- filter items end  -->
     </div>
     <!-- flex body wrapper end -->
   </div>
@@ -1419,6 +1424,60 @@
       });
     });
 
+
+    // for menu dropdown
+
+    function initializeDropdown(buttonId, menuId) {
+      const menuButton = document.getElementById(buttonId);
+      const dropdownMenu = document.getElementById(menuId);
+
+      menuButton.addEventListener('click', () => {
+        if (dropdownMenu.style.display === 'block') {
+          dropdownMenu.style.display = 'none';
+        } else {
+          dropdownMenu.style.display = 'block';
+        }
+      });
+
+      // Close the dropdown when clicking outside of it
+      document.addEventListener('click', event => {
+        if (
+          !menuButton.contains(event.target) &&
+          !dropdownMenu.contains(event.target)
+        ) {
+          dropdownMenu.style.display = 'none';
+        }
+      });
+    }
+
+    // Initialize the first dropdown
+    initializeDropdown('menu-button', 'menu-1');
+
+    // menu humburger
+    const leftMenu = document.querySelector('.leftMenu');
+    const leftMenuBody = document.querySelector('.leftMenuBody');
+    const FilterMenu = document.querySelector('.FilterMenu');
+    const FilterMenuBody = document.querySelector('.FilterMenuBody');
+    const crossBtn = document.querySelector('.cross');
+    const crossBtn2 = document.querySelector('.cross2');
+
+    function openLeftMenuBody() {
+      leftMenuBody.classList.toggle('ShowLeftMenu');
+    }
+    function opneFilterMenu() {
+      FilterMenuBody.classList.toggle('showFilterMenu');
+    }
+    function hideItem() {
+      leftMenuBody.classList.toggle('ShowLeftMenu');
+    }
+    function hideItem2() {
+      FilterMenuBody.classList.toggle('showFilterMenu');
+    }
+
+    crossBtn.addEventListener('click', hideItem);
+    crossBtn2.addEventListener('click', hideItem2);
+    leftMenu.addEventListener('click', openLeftMenuBody);
+    FilterMenu.addEventListener('click', opneFilterMenu);
 
   </script>
 </body>

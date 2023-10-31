@@ -6,6 +6,7 @@ module.exports = {
       sm: '480px',
       md: '768px',
       lg: '976px',
+      xlg: '1200px',
       xl: '1440px',
       xxl: '1536px',
     },
@@ -24,6 +25,7 @@ module.exports = {
       colorP: '#5F7D8E',
       color1: '#92a1ba1a',
       transparent: 'transparent',
+      '44ABB9': '#44ABB9',
     },
     fontFamily: {
       muli: ['Muli'],
@@ -45,7 +47,11 @@ module.exports = {
         xsm: '0.9375rem',
         '22px': '1.375rem',
       },
-
+      boxShadow: {
+        '3xl': '0px 2px 20px rgba(0, 0, 0, 0.20)',
+        '4xl': '0 2px 20px 0 rgba(38,34,98,0.07)',
+        '5xl': '0 2px 20px 0 rgba(46,94,152,0.5)',
+      },
       borderRadius: {
         '10px': '0.625rem',
       },

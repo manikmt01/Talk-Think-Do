@@ -42,6 +42,80 @@
   .commonNavItemText {
     @apply flex-1 ml-11px tracking-tighter text-xsm leading-5 text-White self-center;
   }
+
+  .commonButton {
+    @apply self-center bg-Secondary rounded-[20.5px] pl-[35px] pr-[35px] py-[7px] text-sm leading-[20px] text-White;
+  }
+
+  .commonItem1 {
+    @apply self-center bg-Secondary shadow-5xl rounded-[18px] pl-10px pr-3 py-[2.5px] text-sm leading-[26px] text-White flex gap-[6px];
+  }
+
+  .commonItem2 {
+    @apply lg:grid lg:grid-cols-12 block p-[7px] bg-White shadow-4xl mb-10px last:mb-0;
+  }
+
+  .commonButton2Inner {
+    @apply flex lg:justify-end sm:gap-15px gap-x-3 gap-y-2 flex-wrap lg:mt-0 mt-2;
+  }
+
+  .commonItem3 {
+    @apply flex flex-wrap gap-10px text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm;
+  }
+
+
+  .commonItem4 {
+    @apply flex flex-wrap gap-[6.5px] text-Primary text-sm leading-[26px] border border-ButtonBorderColor border-solid px-10px pt-[1px] pb-[3px] rounded-sm;
+  }
+
+
+  .commonItem5 {
+    @apply flex flex-wrap gap-10px text-Primary text-sm leading-[26px];
+  }
+
+  .commonItem6 {
+    @apply block text-Primary text-lg leading-6 tracking-tighter mb-[3px];
+  }
+
+  .commonItem7 {
+    @apply bg-ButtonBorderColorOp2 w-66px h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center;
+  }
+
+  .commonItem8 {
+    @apply w-full border border-solid border-[#D0D6E1] rounded text-left text-base tracking-tighter leading-tight font-semibold;
+  }
+
+  .commonItem9 {
+    @apply text-[13px] leading-5 tracking-tight text-Primary;
+  }
+
+
+
+  .commonItem10 {
+    @apply bg-PublishedOp01 w-[70.55px] h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center border-l-[4.28px] border-Published border-solid rounded-s-[3px];
+  }
+
+
+  .commonItem11 {
+    @apply md:flex md:justify-between items-center flex-wrap pb-4;
+  }
+
+  .commonItem12 {
+    @apply text-22px self-center text-Primary font-semibold leading-7 tracking-tight sm:mb-0 mb-3;
+  }
+
+  .commonItem13 {
+    @apply border border-[#DCE1E9] border-solid w-full py-[11px] px-[15.5px] text-[#063361] sm:text-[15px] text-xs leading-5 placeholder:text-[#063361] focus:outline-none focus:border-Primary focus:ring-Primary focus:ring-0 rounded-sm bg-transparent;
+  }
+
+  .commonPadding {
+    @apply py-30px sm:pl-30px xlg:pr-5 sm:pr-30px pr-3 pl-3;
+  }
+
+  .commonItem14 {
+    @apply block md:grid md:grid-cols-12 p-[7px] bg-White shadow-4xl mb-10px last:mb-0;
+  }
+
 }
 
 /* custom style */
@@ -148,14 +222,16 @@
     opacity: 1 !important;
   }
 
-  .accordion-button {
+  .accordion-button,
+  .accordion-buttonCustom {
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
     padding: 6px 6px 6px 14px;
   }
 
-  .accordion-button::after {
+  .accordion-button::after,
+  .accordion-buttonCustom::after {
     position: absolute;
     content: "";
     right: 6px;
@@ -167,7 +243,8 @@
     transition: background .5s;
   }
 
-  .accordion-button::before {
+  .accordion-button::before,
+  .accordion-buttonCustom::before {
     position: absolute;
     content: "";
     width: 23px;
@@ -198,6 +275,11 @@
     background-color: #fff;
     box-shadow: 0px 2px 20px 0px rgba(38, 34, 98, 0.07);
     border-color: #fff;
+    color: #262262;
+  }
+
+  .showFilterMenu .custom-checkbox label {
+    color: #ffff;
   }
 
   .accordion-content {
@@ -234,6 +316,20 @@
     transition: background-color 0.5s, border-color 0.5s;
   }
 
+  .custom-checkbox.custom-checkbox2 input[type="checkbox"]:checked+label::before {
+    background-image: none;
+  }
+
+  .custom-checkbox.custom-checkbox2 label::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='3' viewBox='0 0 10 3' fill='none'%3E%3Cpath d='M1 1.5H8.56743' stroke='%23262262' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-size: 10px 3px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: #262262;
+    width: 19px;
+    height: 19px;
+  }
+
   /* Define styles for the checked state */
   .custom-checkbox input[type="checkbox"]:checked+label::before {
     border-color: #44ABB9;
@@ -267,15 +363,11 @@
   }
 
   .ItemMid {
-    padding-right: 248px;
+    padding-right: 248px !important;
     transition: all ease .6s;
   }
 
-  .filterWrapp {
-    width: 100%;
-    opacity: 1;
-    right: 0;
-  }
+
 
   .filterSm .w-\[248px\] {
     width: 60px;
@@ -283,7 +375,7 @@
 
   #filte {
     transform: rotate(0deg);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s;
     left: 0;
     top: 0;
   }
@@ -293,14 +385,85 @@
     position: relative;
     left: -25px;
     top: 20px;
-    transition: width 0.5s ease, transform 0.5s ease;
+    transition: width 0.5s, transform 0.5s ease;
   }
 
   .filterSm .filterWrapp {
     position: relative;
-    right: -999999999999999;
-    opacity: 0;
-    transition: width 0.5s ease;
+    right: -150px;
+    transition: all ease .5s;
+  }
+
+  .showFilterMenu.filterSm .filterWrapp {
+    right: 0;
+    transition: all ease .5s;
+  }
+
+  .leftMenuBody,
+  .leftMenuBody,
+  .FilterMenuBody {
+    transition: width 1s, opacity 1s;
+  }
+
+
+
+  .ShowLeftMenu {
+    width: 100%;
+    left: 0;
+    display: block;
+    overflow-y: auto;
+    max-height: 100vh;
+    overflow-x: hidden;
+    opacity: 1;
+    transition: all ease 1s;
+  }
+
+  .showFilterMenu .w-\[248px\] {
+    width: 100% !important;
+  }
+
+  .showFilterMenu .filterWrapp {
+    opacity: 1;
+  }
+
+  .showFilterMenu {
+    width: 100% !important;
+    right: 0;
+    top: 0;
+    display: block;
+    opacity: 1;
+  }
+
+  @media (max-width:1200px) {
+    .FilterMenuBody {
+      width: 0;
+      /* left: -99999999px; */
+    }
+
+    .leftMenuBody {
+      /* left: -9999999px; */
+      top: 0;
+      transition: all ease 1s;
+    }
+
+    .filterWrapp {
+      width: 100%;
+      opacity: 1;
+      right: 0;
+    }
+
+    .commonNav {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .showFilterMenu .FilterMenuBodyinner {
+    overflow-y: auto;
+    max-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+    transition: width 1s, opacity 1s;
   }
 
 }
